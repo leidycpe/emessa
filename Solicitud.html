@@ -1,0 +1,116 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registro de Solicitud</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-image: url("logo.png");
+              margin: 0;
+              padding: 20px;
+          }
+          .container {
+              max-width: 600px;
+              margin: auto;
+              background: rgba(252, 110, 0);
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+              background-image: url("logo.jpg");
+          }
+          h2 {
+              text-align: center;
+          }
+          label {
+              display: block;
+              margin: 0 1px 0 1px;
+          }
+          input[type="text"],
+          input[type="date"],
+          select,
+          textarea,
+          input[type="email"],
+          input[type="file"] {
+              width: 90%;
+              padding: 6px;
+              margin: 5px 0 15px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+          }
+          input[type="submit"] {
+              background-color: #5cb85c;
+              color: white;
+              border: none;
+              padding: 10px 15px;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          input[type="submit"]:hover {
+              background-color: #4cae4c;
+          }
+      </style>
+      <script>
+          window.onload = function() {
+              const today = new Date();
+              const dd = String(today.getDate()).padStart(2, '0');
+              const mm = String(today.getMonth() + 1).padStart(2, '0'); // Enero es 0!
+              const yyyy = today.getFullYear();
+              const formattedDate = `${yyyy}-${mm}-${dd}`;
+              document.getElementById("fechaRegistro").value = formattedDate;
+          }
+      </script>
+  </head>
+  <body>
+      <div class="container">
+          <h2>Registro de Solicitud</h2>
+          <form>
+              <label for="fechaRegistro">Fecha Registro Solicitud:</label>
+              <input type="date" id="fechaRegistro" name="fechaRegistro" required readonly>
+
+              <label for="tipoDocumento">Tipo de Documento:</label>
+              <select id="tipoDocumento" name="tipoDocumento" required>
+                  <option value="">Seleccione el tipo </option>
+                  <option value="pendiente">cedula</option>
+                  <option value="completado">Nit</option>
+              </select>
+              <label for="numeroDocumento">Número de Documento:</label>
+              <input type="text" id="numeroDocumento" name="numeroDocumento" required>
+
+              <label for="lugarExpedicion">Lugar de Expedición:</label>
+              <input type="text" id="lugarExpedicion" name="lugarExpedicion" required>
+
+              <label for="barrio">Barrio:</label>
+              <input type="text" id="barrio" name="barrio" required>
+
+              <label for="tipoSolicitud">Tipo de Solicitud:</label>
+              <select id="tipoSolicitud" name="tipoSolicitud" required>
+                  <option value="">Seleccione el tipo </option>
+                  <option value="pendiente">Reconexion</option>
+                  <option value="completado">Nuevo Servicio</option>
+                  <option value="completado">translado</option>
+                  <option value="completado">factura</option>
+                  <option value="completado">Visita Tecnica</option>
+                  <option value="completado">otro</option>
+              </select>
+
+              <label for="detalleSolicitud">Detalle de la Solicitud:</label>
+              <textarea id="detalleSolicitud" name="detalleSolicitud" rows="4" required></textarea>
+
+              <label for="cargarArchivo">Cargar Archivos (hasta 3):</label>
+              <input type="file" id="cargarArchivo1" name="cargarArchivo" required>
+              <input type="file" id="cargarArchivo2" name="cargarArchivo">
+              <input type="file" id="cargarArchivo3" name="cargarArchivo">
+
+              <label for="numeroContrato">Número de Contrato:</label>
+              <input type="text" id="numeroContrato" name="numeroContrato" required>
+
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" required>
+
+              <input type="submit" value="Registrar Solicitud">
+          </form>
+      </div>
+  </body>
+  </html>

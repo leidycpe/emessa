@@ -1,0 +1,77 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>INICIO EMESSA</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <style type="text/css">
+        body {
+            background-image: url('logo.png');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        #contenedor {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #central {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .titulo {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+       
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .pie-form {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .inferior {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="login">
+                <div class="titulo">Bienvenido</div>
+                <form action="login.php" method="POST" id="loginform">
+                    <input type="text" name="usuario" placeholder="usuario_nombre" required>
+                    <input type="password" name="contraseña" placeholder="contraseña" required>
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+                <div class="pie-form">
+                    <a href="#">¿Perdiste tu contraseña?</a><br>
+                    <a href="REGISTRO.html">¿No tienes Cuenta? Regístrate</a>
+                </div>
+            </div>
+            <div class="inferior">
+                <a href="#">Volver</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

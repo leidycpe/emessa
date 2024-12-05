@@ -1,0 +1,80 @@
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Consulta de Solicitud</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f4f4f4;
+              margin: 0;
+              padding: 20px;
+          }
+          .container {
+              max-width: 600px;
+              margin: auto;
+              background: white;
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          h2 {
+              text-align: center;
+          }
+          label {
+              display: block;
+              margin: 10px 0 5px;
+          }
+          input[type="text"],
+          select {
+              width: 100%;
+              padding: 10px;
+              margin: 5px 0 15px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+          }
+          input[type="submit"] {
+              background-color: #5cb85c;
+              color: white;
+              border: none;
+              padding: 10px 15px;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          input[type="submit"]:hover {
+              background-color: #4cae4c;
+          }
+          .edit-icon {
+              cursor: pointer;
+              font-size: 20px;
+              color: #007bff;
+              text-decoration: none;
+              float: right;
+          }
+          .edit-icon:hover {
+              color: #0056b3;
+          }
+      </style>
+  </head>
+  <body>
+      <div class="container">
+          <h2>Consulta de Solicitud</h2>
+          <form>
+              <label for="codigo">Código de la Solicitud:</label>
+              <input type="text" id="codigo" name="codigo" required>
+
+              <label for="estado">Estado de la Solicitud:</label>
+              <select id="estado" name="estado" required>
+                  <option value="">Seleccione un estado</option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="completado">Completado</option>
+                  <option value="cancelado">Cancelado</option>
+              </select>
+
+              <input type="submit" value="Consultar">
+          </form>
+          <a class="edit-icon" href="formulario_notificaciones.html">&#9998; Editar</a> <!-- Cambia el enlace al formulario anterior -->
+      </div>
+  </body>
+  </html>

@@ -1,0 +1,36 @@
+<HEAD>
+<TITLE>REGISTRO USUARIO</TITLE>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario de Registro</title>
+	<link rel="icon" type="ico" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script type="text/javascript" src="js/app.js"></script>
+</head>
+<body background ="logo.png">
+<h1>Formulario de Registro</h1>
+<form action="php/registrar.php" method="post" class="form-register">
+	<h2 class="form-titulo">CREA UNA CUENTA</h2>
+	<div class="contenedor-inputs">
+		<input type="text" id="tipoDocumento" name="tipoDocumento" placeholder="TipoDocumento" class="input-48" required>
+		<input type="text" id="documento" name="documento" placeholder="Documento" class="input-48" required>
+		<input type="text" id="direccion" name="direccion" placeholder="Direccion" class="input-48" required>
+		<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="input-48" required>
+		<input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" class="input-48" required>
+		<input type="text" id="departamento" name="departamento" placeholder="Departamento" class="input-48" required>
+		<input type="email" id="correo" name="correo" placeholder="Correo" class="input-100" required>
+		<input type="text" id="usuario" name="usuario" placeholder="Usuario" class="input-100" required>
+		<input type="password" id="clave" name="clave" placeholder="Contraseña" class="input-48"required >
+		<input type="password" id="clave" name="confirmacionclave" placeholder="ConfirmaContraseña" class="input-48"required >
+		<input type="text" id="telefono" name="telefono" placeholder="Teléfono" class="input-100" required>
+		<input type="submit" value="Registrar" class="btn-enviar">
+		<p class="form-link">Ya tienes una cuenta?<a href="index.html">Ingresa aquí</a></p>
+	</div>
+</form>
+	
+</body>
+</html>

@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulario de Notificaciones</title>
+      <style>
+          body {
+              font-family: Arial, sans-serif;
+              background-image: url("logo.png"); /* Cambia esta URL por la de tu imagen */
+              
+          }
+          .container {
+              max-width: 600px;
+              margin: auto;
+              background: rgba(252, 110, 0); /* Fondo blanco semitransparente */
+              padding: 20px;
+              border-radius: 5px;
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          h2 {
+              text-align: center;
+          }
+          label {
+              display: block;
+              margin: 10px 0 5px;
+          }
+          input[type="text"],
+          input[type="date"],
+          input[type="time"],
+          select,
+          textarea {
+              width: 100%;
+              padding: 10px;
+              margin: 5px 0 15px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+          }
+          input[type="submit"] {
+              background-color: #5cb85c;
+              color: white;
+              border: none;
+              padding: 10px 15px;
+              border-radius: 5px;
+              cursor: pointer;
+          }
+          input[type="submit"]:hover {
+              background-color: #4cae4c;
+          }
+      </style>
+      <script>
+          window.onload = function() {
+              const today = new Date();
+              const fechaInput = document.getElementById('fecha');
+              const horaInput = document.getElementById('hora');
+
+              // Formatear la fecha en YYYY-MM-DD
+              const fechaFormateada = today.toISOString().split('T')[0];
+              fechaInput.value = fechaFormateada;
+
+              // Formatear la hora en HH:MM
+              const horaFormateada = today.toTimeString().split(' ')[0].substring(0, 5);
+              horaInput.value = horaFormateada;
+          }
+      </script>
+  </head>
+  <body>
+      <div class="container">
+          <h2>Formulario de Notificaciones</h2>
+          <form>
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" name="fecha" required>
+
+              <label for="hora">Hora:</label>
+              <input type="time" id="hora" name="hora" required>
+
+              <label for="codigo">Código de la Solicitud:</label>
+              <input type="text" id="codigo" name="codigo" required>
+
+              <label for="nombre">Nombre del Usuario:</label>
+              <input type="text" id="nombre" name="nombre" required>
+
+              <label for="detalle">Detalle de la Solicitud:</label>
+              <textarea id="detalle" name="detalle" rows="4" required></textarea>
+
+              <label for="codigo">Documento Usuario:</label>
+              <input type="number" id="codigo" name="codigo" required>
+
+              <label for="detalle">Respuesta Solicitud:</label>
+              <textarea id="detalle" name="detalle" rows="4" required></textarea>
+
+              <label for="estado">Estado:</label>
+              <select id="estado" name="estado" required>
+                  <option value="">Seleccione un estado</option>
+                  <option value="pendiente">Pendiente</option>
+                  <option value="completado">Completado</option>
+                  <option value="cancelado">Cancelado</option>
+              </select>
+
+              
+
+              <input type="submit" value="Enviar">
+          </form>
+      </div>
+  </body>
+  </html>
